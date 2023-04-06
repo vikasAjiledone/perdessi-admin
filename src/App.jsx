@@ -18,6 +18,7 @@ import Myclient from './pages/Myclients';
 import Transferlead from './pages/Transferlead';
 import Allemployees from './pages/Allemployees';
 import Tableclient from './pages/Tableclient';
+import Services from './pages/Services';
 
 function App() {
 
@@ -27,7 +28,8 @@ function App() {
     document.querySelector('html').style.scrollBehavior = 'auto'
     window.scroll({ top: 0 })
     document.querySelector('html').style.scrollBehavior = ''
-  }, [location.pathname]); // triggered on route change
+  }, [location.pathname]); 
+  // triggered on route change
 
   return (
     <>
@@ -39,6 +41,7 @@ function App() {
         <Route exact path="/myclient" element={<Myclient />} />
         <Route exact path="/transferlead" element={<Transferlead />} />
         <Route exact path="/allemployee" element={<Allemployees />} />
+        <Route exact path="/services" element={<Services />} />
       </Routes>
     </>
   );

@@ -3,8 +3,8 @@ import Sidebar from '../partials/Sidebar';
 import Header from '../partials/Header';
 import WelcomeBanner from '../partials/dashboard/WelcomeBanner';
 
-const Allemployees = () => {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
+const Services = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <div className="flex h-screen overflow-hidden">
 
@@ -28,4 +28,4 @@ const Allemployees = () => {
   )
 }
 
-export default Allemployees
+export default Services

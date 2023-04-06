@@ -1,8 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import { VscAccount } from "react-icons/vsc";
-
+import { Link, NavLink, useLocation } from "react-router-dom";
 import SidebarLinkGroup from "./SidebarLinkGroup";
+import { TiUserAdd } from "react-icons/ti";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { MdDashboard } from "react-icons/md";
+import { MdOutlineLibraryAdd } from "react-icons/md";
+import { MdOutlinePadding } from "react-icons/md";
+import { RiFolderTransferFill } from "react-icons/ri";
+import { BsFillPersonFill } from "react-icons/bs";
 
 function Sidebar({ sidebarOpen, setSidebarOpen }) {
   const location = useLocation();
@@ -65,7 +70,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
       <div
         id="sidebar"
         ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-black p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-slate-700 p-4 transition-all duration-200 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-64"
         }`}
       >
@@ -129,6 +134,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
             </svg>
           </NavLink>
         </div>
+        
 
         {/* Links */}
         <div className="space-y-8">
@@ -142,8 +148,8 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick, open) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        to="#0"
                         className={`block text-slate-200 truncate transition duration-150 ${
                           pathname === "/" || pathname.includes("dashboard")
                             ? "hover:text-slate-200"
@@ -195,7 +201,7 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -203,9 +209,9 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
 
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
-                  <img src="" alt="lead" />
+                  <MdDashboard className="ml-3 text-white text-2xl" />
                   <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                    <a href="/">Dashboard</a>
+                    <Link to="/">Dashboard</Link>
                   </span>
                 </div>
               </div>
@@ -224,17 +230,17 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   </h3>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src="" alt="lead" />
+                      <TiUserAdd className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/addclient">Add Client</a>
+                        <Link to="/addclient">Add Client</Link>
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src={VscAccount} alt="lead" />
+                      <BsFillPeopleFill className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/myclient">My Client</a>
+                        <Link to="/myclient">My Client</Link>
                       </span>
                     </div>
                   </div>
@@ -256,25 +262,25 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   </h3>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src="" alt="lead" />
+                      <MdOutlineLibraryAdd className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/addlead">Add Lead</a>
+                        <Link to="/addlead">Add Lead</Link>
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src="" alt="lead" />
+                      <MdOutlinePadding className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/mylead">My Lead</a>
+                        <Link to="/mylead">My Lead</Link>
                       </span>
                     </div>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src="" alt="lead" />
+                      <RiFolderTransferFill className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/transferlead">Transfer Leads</a>
+                        <Link to="/transferlead">Transfer Leads</Link>
                       </span>
                     </div>
                   </div>
@@ -295,9 +301,32 @@ function Sidebar({ sidebarOpen, setSidebarOpen }) {
                   </h3>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
-                      <img src="" alt="lead" />
+                      <BsFillPersonFill className="ml-3 text-white text-2xl" />
                       <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
-                        <a href="/addlead">All Employees</a>
+                        <Link to="/allemployee">All Employees</Link>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="space-y-8 my-5">
+                <div>
+                  <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
+                    <span
+                      className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
+                      aria-hidden="true"
+                    >
+                      •••
+                    </span>
+                    <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">
+                      Services
+                    </span>
+                  </h3>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center">
+                      <BsFillPersonFill className="ml-3 text-white text-2xl" />
+                      <span className="m-3 text-slate-200 ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200">
+                        <Link to="/services">All Services</Link>
                       </span>
                     </div>
                   </div>
