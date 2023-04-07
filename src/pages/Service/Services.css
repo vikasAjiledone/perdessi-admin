@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* HOME LOAN */
+
+.Home-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(255, 72, 115);
+    background: linear-gradient(0deg, rgba(255, 72, 115, 0.8995973389355743) 0%, rgba(255, 20, 76, 0.8883928571428571) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* BUSINESS LOAN */
+
+.Business-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(244, 72, 255);
+    background: linear-gradient(0deg, rgba(244, 72, 255, 0.8743872549019608) 0%, rgba(255, 20, 175, 0.9332107843137255) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* PERSONAL LOAN */
+
+.Personal-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(133, 72, 255);
+    background: linear-gradient(0deg, rgba(133, 72, 255, 0.8743872549019608) 0%, rgba(67, 20, 255, 0.9500175070028011) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* PERSONAL LOAN */
+
+.Mortgage-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(72, 226, 255);
+    background: linear-gradient(0deg, rgba(72, 226, 255, 0.8743872549019608) 0%, rgba(20, 135, 255, 0.9500175070028011) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* PERSONAL LOAN */
+
+.Gold-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(255, 191, 72);
+    background: linear-gradient(0deg, rgba(255, 191, 72, 0.8743872549019608) 0%, rgba(255, 189, 20, 0.5942752100840336) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* CREDIT LOAN */
+
+.Credit-card {
+    max-width: 11vw;
+    min-width: 11vw;
+    height: 24vh !important;
+    font-family: 'Bebas Neue', cursive;
+    background: rgb(255, 115, 72);
+    background: linear-gradient(0deg, rgba(255, 115, 72, 0.8379726890756303) 0%, rgba(255, 110, 20, 0.5942752100840336) 100%);
+    z-index: -8;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+}
+
+/* CARD HOVER */
+/* .Card-Hover:hover{
+    max-width: 12vw !important;
+    min-width: 12vw !important;
+    height: 25vh !important;
+    box-shadow: 3px 4px 6px 2px #645f5fd4
+} */
+
+.Card-Heading {
+    position: relative;
+    top: -2.75rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 23px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.Card-Heading:hover {
+    position: relative;
+    top: -2.75rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 23px;
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
+}
+
+.HL-Card-Heading{
+    position: relative;
+    top: -4.25rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 19px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.HL-Card-Heading:hover{
+    position: relative;
+    top: -4.25rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 19px;
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
+}
+
+.IRS-Card-Heading{
+    position: relative;
+    top: -2.5rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 19px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.IRS-Card-Heading:hover{
+    position: relative;
+    top: -2.5rem;
+    color: rgb(255, 255, 255);
+    z-index: 10;
+    font-size: 19px;
+    cursor: pointer;
+    display: inline-block;
+    padding-bottom: 2px;
+    border-bottom: 2px solid;
+}
+
+.Home-Icon {
+    font-size: 8rem !important;
+    color: rgba(255, 255, 255, 0.473) !important;
+    position: relative !important;
+    right: -3rem !important;
+    top: -1.5rem !important;
+    z-index: 0 !important;
+}
