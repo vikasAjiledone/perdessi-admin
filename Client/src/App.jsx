@@ -19,6 +19,7 @@ import Transferlead from './pages/Transferlead';
 import Allemployees from './pages/Allemployees';
 import Tableclient from './pages/Tableclient';
 import Services from './pages/Services';
+import Login from './pages/Login';
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/transferlead" element={<Transferlead />} />
         <Route exact path="/allemployee" element={<Allemployees />} />
         <Route exact path="/services" element={<Services />} />
+        <Route exact path="/login" element={<Login />} />
       </Routes>
     </>
   );
