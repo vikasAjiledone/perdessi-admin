@@ -27,7 +27,7 @@ export const Addclientctrl = async(req, resp) => {
 
 export const MyClintsctrl = async(req, resp) => {
     try {
-        const already = await Clientmodel.findOne({empolyeeid: req.quary.id})
+        const already = await Clientmodel.findOne({empolyeeid: req.params.id})
         if (already) {
             return resp.status(200).send(
                 {
@@ -45,10 +45,10 @@ export const MyClintsctrl = async(req, resp) => {
 
 export const EditClintsctrl = async(req, resp) => {
     try {
-        const already = await Clientmodel.findByIdAndUpdate(
-            {_id: req.quary.id},
-            {$set: req.body}
-            );
+        const already = await Clientmodel.findByIdAndUpdate(req.params.id,
+            req.body,{new: true, runValidators: true}
+        );
+        
         if (already) {
             return resp.status(200).send(
                 {
