@@ -19,9 +19,8 @@
     max-width: 11vw;
     min-width: 11vw;
     height: 24vh !important;
-    font-family: 'Bebas Neue', cursive;
     background: rgb(244, 72, 255);
-    background: linear-gradient(0deg, rgba(244, 72, 255, 0.8743872549019608) 0%, rgba(255, 20, 175, 0.9332107843137255) 100%);
+    background: linear-gradient(0deg, hsla(296, 100%, 64%, 0.874) 0%, hsla(320, 100%, 54%, 0.933) 100%);
     z-index: -8;
     box-shadow: 3px 4px 6px 2px #645f5fd4
 }
@@ -88,17 +87,18 @@
 
 .Card-Heading {
     position: relative;
-    top: -2.75rem;
+    top: -2rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 23px;
     cursor: pointer;
     display: inline-block;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .Card-Heading:hover {
     position: relative;
-    top: -2.75rem;
+    top: -2rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 23px;
@@ -106,21 +106,23 @@
     display: inline-block;
     padding-bottom: 2px;
     border-bottom: 2px solid;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .HL-Card-Heading{
     position: relative;
-    top: -4.25rem;
+    top:-3.5rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 19px;
     cursor: pointer;
     display: inline-block;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .HL-Card-Heading:hover{
     position: relative;
-    top: -4.25rem;
+    top: -3.5rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 19px;
@@ -128,21 +130,23 @@
     display: inline-block;
     padding-bottom: 2px;
     border-bottom: 2px solid;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .IRS-Card-Heading{
     position: relative;
-    top: -2.5rem;
+    top: -1.75rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 19px;
     cursor: pointer;
     display: inline-block;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .IRS-Card-Heading:hover{
     position: relative;
-    top: -2.5rem;
+    top: -1.75rem;
     color: rgb(255, 255, 255);
     z-index: 10;
     font-size: 19px;
@@ -150,6 +154,7 @@
     display: inline-block;
     padding-bottom: 2px;
     border-bottom: 2px solid;
+    font-family: 'Bebas Neue', cursive;
 }
 
 .Home-Icon {

@@ -2,6 +2,7 @@ import Express from "express";
 import dotenv from "dotenv";
 import morgan from "morgan";
 import CustomerRoutes from "./Routes/CustomerRoute.js";
+import clientRoutes from "./Routes/ClientRoute.js";
 import cors from "cors";
 import config from "./config/Config.js";
 
@@ -21,6 +22,7 @@ app.use(morgan("dev"));
 
 //routes
 app.use("/api/v1/crm", CustomerRoutes);
+app.use("/api/v1/crm", clientRoutes);
 
 
 
