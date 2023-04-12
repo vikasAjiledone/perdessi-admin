@@ -44,6 +44,10 @@ const ClientSchema = new mongoose.Schema(
         zip:{
             type: Number,
             required: true
+        },
+        empolyeeid:{
+            type: mongoose.Schema.ObjectId,
+            ref: 'employee'
         }
     }
 )

@@ -18,6 +18,8 @@ import Myclient from './pages/Myclients';
 import Transferlead from './pages/Transferlead';
 import Allemployees from './pages/Allemployees';
 import Tableclient from './pages/Tableclient';
+import Myleadform from './components/Myleadform';
+import Leadform from './pages/Leadform';
 import Services from './pages/Services';
 import Login from './pages/Login';
 
@@ -43,7 +45,9 @@ function App() {
         <Route exact path="/transferlead" element={<Transferlead />} />
         <Route exact path="/allemployee" element={<Allemployees />} />
         <Route exact path="/services" element={<Services />} />
+        <Route exact path="/leadform" element={<Leadform />} />
         <Route exact path="/login" element={<Login />} />
+        {/* <Route exact path="/leadform" element={<Myleadform/>} /> */}
       </Routes>
     </>
   );

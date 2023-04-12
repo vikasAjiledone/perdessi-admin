@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Transition from "../../utils/Transition";
 
 // import UserAvatar from "../../images/user-avatar-32.png";
@@ -34,14 +34,6 @@ function UserMenu() {
     document.addEventListener("keydown", keyHandler);
     return () => document.removeEventListener("keydown", keyHandler);
   });
-
-  // // Logout 
-  // const navigate = useNavigate()
-  // const Logout = () =>{
-  //   navigate("");
-  //   localStorage.removeItem("token");
-  //   localStorage.removeItem("user");
-  // }
 
   return (
     <div className="relative inline-flex">
@@ -106,7 +98,7 @@ function UserMenu() {
             <li>
               <Link
                 className="font-medium text-sm text-indigo-500 hover:text-indigo-600 flex items-center py-1 px-3"
-                to="/login"
+                to="/"
                 onClick={() => setDropdownOpen(!dropdownOpen)}
               >
                 Sign Out

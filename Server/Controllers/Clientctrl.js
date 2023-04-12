@@ -27,13 +27,19 @@ export const Addclientctrl = async(req, resp) => {
 
 export const MyClintsctrl = async(req, resp) => {
     try {
-        const already = await Clientmodel.findOne({empolyeeid: req.params.id})
+        const already = await Clientmodel.find({empolyeeid: req.params.id}).populate(
+            {
+                path: 'empolyeeid',
+                select: 'first_name last_name email'
+            }
+        )
         if (already) {
             return resp.status(200).send(
                 {
                     Succes: true,
                     already
-                });
+                }
+            );
         }
     } catch (error) {
         resp.status(500).send( {
@@ -45,16 +51,15 @@ export const MyClintsctrl = async(req, resp) => {
 
 export const EditClintsctrl = async(req, resp) => {
     try {
-        const already = await Clientmodel.findByIdAndUpdate(req.params.id,
-            req.body,{new: true, runValidators: true}
-        );
+        const already = await Clientmodel.findByIdAndUpdate(req.params.id, req.body,{new: true, runValidators: true});
         
         if (already) {
             return resp.status(200).send(
                 {
                     Succes: true,
                     already
-                });
+                }
+            );
         }
     } catch (error) {
         resp.status(500).send( {

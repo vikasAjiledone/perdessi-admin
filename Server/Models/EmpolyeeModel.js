@@ -24,7 +24,9 @@ const employeeSchema = new mongoose.Schema(
         },
         role: {
           type: Boolean,
+        //   required: true,
           default: false
+          
         }
     }
 )

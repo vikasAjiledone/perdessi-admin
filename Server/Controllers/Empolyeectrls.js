@@ -1,4 +1,4 @@
-import { employeeModel } from "../Models/CustomerModel.js"
+import { employeeModel } from "../Models/EmpolyeeModel.js"
 import bcrypt from "bcrypt"
 import JWT from "jsonwebtoken";
 

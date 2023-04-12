@@ -1,5 +1,5 @@
 import Express from "express";
-import {  addemployee, employeelogin, getallemployee } from "../Controllers/Customerctrls.js";
+import {  addemployee, employeelogin, getallemployee } from "../Controllers/Empolyeectrls.js";
 import Tokencheck from "../Middleware/Tokencheck.js";
 
 //rest object
