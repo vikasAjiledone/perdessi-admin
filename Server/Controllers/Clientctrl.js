@@ -68,3 +68,27 @@ export const EditClintsctrl = async(req, resp) => {
         })
     }
 }
+
+export const GetAllClintsctrl = async(req, resp) => {
+    try {
+        const already = await Clientmodel.find().populate(
+            {
+                path: 'empolyeeid',
+                select: 'first_name last_name email'
+            }
+        )
+        if (already) {
+            return resp.status(200).send(
+                {
+                    Succes: true,
+                    already
+                }
+            );
+        }
+    } catch (error) {
+        resp.status(500).send( {
+            success: false,
+            message: 'Data Not Fatched',
+        })
+    }
+}

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ClientSchema = new mongoose.Schema(
+const LeadSchema = new mongoose.Schema(
     {
         first_name:{
             type: String,
@@ -13,16 +13,12 @@ const ClientSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        email:{
+        title:{
             type: String,
             required: true
         },
         phone:{
             type: Number,
-            required: true
-        },
-        gender:{
-            type: String,
             required: true
         },
         pan:{
@@ -37,15 +33,7 @@ const ClientSchema = new mongoose.Schema(
             type: Number,
             required: true
         },
-        gst:{
-            type: String,
-            required: true
-        },
-        city:{
-            type: String,
-            required: true
-        },
-        state:{
+        gender:{
             type: String,
             required: true
         },
@@ -56,10 +44,13 @@ const ClientSchema = new mongoose.Schema(
         empolyeeid:{
             type: mongoose.Schema.ObjectId,
             ref: 'employee'
+        },
+        serviceid:{
+            type: mongoose.Schema.ObjectId,
+            ref: 'services'
         }
     }
 )
 
-const Clientmodel = mongoose.model("clients",ClientSchema,"clients");
-
-export default Clientmodel;
+const Leadmodel = mongoose.model("leads",LeadSchema,"leads");
+export default Leadmodel;

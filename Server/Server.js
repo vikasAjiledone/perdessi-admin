@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import morgan from "morgan";
 import CustomerRoutes from "./Routes/EmpolyeeRoute.js";
 import clientRoutes from "./Routes/ClientRoute.js";
+import LeadRoutes from "./Routes/LeadRoute.js";
+import ServiceRoutes from "./Routes/ServiceRoute.js";
 import cors from "cors";
 import config from "./config/Config.js";
 
@@ -23,6 +25,8 @@ app.use(morgan("dev"));
 //routes
 app.use("/api/v1/crm", CustomerRoutes);
 app.use("/api/v1/crm", clientRoutes);
+app.use("/api/v1/crm", LeadRoutes);
+app.use("/api/v1/crm", ServiceRoutes);
 
 
 
